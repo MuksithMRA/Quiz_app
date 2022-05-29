@@ -1,0 +1,24 @@
+[
+
+
+    {
+        "id": 1,
+        "quiz": "Is Flutter Free?",
+        "answers": {
+            "1": "Yes",
+            "2": "No"
+        },
+        "correctAnswer": "1"
+    },
+    {
+        "id": 2,
+        "quiz": "Is Flutter Cross Platform?",
+        "answers": {
+            "1": "Yes",
+            "2": "No"
+        },
+        "correctAnswer": "1"
+    }
+
+
+]
