@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:quiz_app/Models/screensize.dart';
@@ -11,9 +10,9 @@ class Wrapper extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double _height = MediaQuery.of(context).size.height;
-    double _width = MediaQuery.of(context).size.width;
-    ScreenSize.getScreenSize(h: _height, w: _width);
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
+    ScreenSize.getScreenSize(h: height, w: width);
     //return const Login();
     final authState = Provider.of<AuthState>(context, listen: true);
 

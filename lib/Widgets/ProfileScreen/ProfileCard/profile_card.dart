@@ -7,10 +7,10 @@ class ProfileCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return const SizedBox(
       height: 220,
       child: Stack(
-        children: const [
+        children: [
           BgDetails(),
           RoundedAvatar(),
         ],
@@ -18,7 +18,3 @@ class ProfileCard extends StatelessWidget {
     );
   }
 }
-
-
-
-

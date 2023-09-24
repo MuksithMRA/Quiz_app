@@ -32,12 +32,12 @@ class CustomButton extends StatelessWidget {
       child: MaterialButton(
           height: height,
           minWidth: minWidth,
+          materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+          onPressed: ontap,
           child: CustomText(
             text: text,
             color: txtColor ?? kWhite,
-          ),
-          materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-          onPressed: ontap),
+          )),
     );
   }
 }

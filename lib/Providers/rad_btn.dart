@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:quiz_app/Database/database.dart';
 import 'package:quiz_app/Widgets/common/snackbar.dart';
@@ -75,7 +74,7 @@ class RadBtn extends ChangeNotifier {
     } else {
       var marks = Database.testTileData[tileIndex].mark;
       marks = mark;
-      print(marks);
+      debugPrint(marks.toString());
       notifyListeners();
     }
   }

@@ -6,6 +6,7 @@ import 'rounded_heading.dart';
 
 PreferredSize customAppBar({required String title, required leadingIcon}) {
   return PreferredSize(
+      preferredSize: Size.fromHeight(ScreenSize.height! * 0.2),
       child: Stack(
         children: [
           //background curve
@@ -18,6 +19,5 @@ PreferredSize customAppBar({required String title, required leadingIcon}) {
             leadingIcon: leadingIcon,
           ),
         ],
-      ),
-      preferredSize: Size.fromHeight(ScreenSize.height! * 0.2));
+      ));
 }

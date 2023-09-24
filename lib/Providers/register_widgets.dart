@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:quiz_app/Models/register_user.dart';
 import 'package:quiz_app/Routers/route_names.dart';
-import 'package:quiz_app/Screens/Home/home.dart';
 import 'package:quiz_app/Services/authentication.dart';
 
 class RegisterWidgets extends ChangeNotifier {

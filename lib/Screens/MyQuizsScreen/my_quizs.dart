@@ -10,16 +10,16 @@ class MyQuizs extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<TestTile> _doneTileItems = Database.testTileData
+    List<TestTile> doneTileItems = Database.testTileData
         .where((element) => element.isDone == true)
         .toList();
 
     return ListView.builder(
-      itemCount: _doneTileItems.length,
+      itemCount: doneTileItems.length,
       itemBuilder: (BuildContext context, int index) {
-        var tileItem = _doneTileItems[index];
+        var tileItem = doneTileItems[index];
 
-        if (_doneTileItems.isNotEmpty) {
+        if (doneTileItems.isNotEmpty) {
           //true
           return TestTileCard(tileItem: tileItem);
         } else {

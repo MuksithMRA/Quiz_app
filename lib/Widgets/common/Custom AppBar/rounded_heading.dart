@@ -19,6 +19,12 @@ class RoundedHeading extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           Container(
+            decoration: BoxDecoration(
+                color: kWhite,
+                borderRadius: BorderRadius.circular(25),
+                border: Border.all(color: primaryColor)),
+            width: ScreenSize.width! * 0.45,
+            height: ScreenSize.height! * 0.08,
             child: Center(
               child: CustomText(
                 text: title,
@@ -26,12 +32,6 @@ class RoundedHeading extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            decoration: BoxDecoration(
-                color: kWhite,
-                borderRadius: BorderRadius.circular(25),
-                border: Border.all(color: primaryColor)),
-            width: ScreenSize.width! * 0.45,
-            height: ScreenSize.height! * 0.08,
           )
         ],
       ),

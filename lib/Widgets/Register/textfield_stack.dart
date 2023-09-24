@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:quiz_app/Models/register_user.dart';
 import 'package:quiz_app/Models/screensize.dart';
 import 'package:quiz_app/Providers/register_widgets.dart';
 import 'package:quiz_app/Widgets/common/custom_textfield.dart';

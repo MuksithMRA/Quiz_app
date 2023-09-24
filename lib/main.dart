@@ -5,9 +5,12 @@ import 'package:quiz_app/Constants/colors.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:quiz_app/Providers/providers.dart';
 import 'package:quiz_app/Routers/route_names.dart';
+import 'package:quiz_app/firebase_options.dart';
 import 'Routers/route.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(
     const MyApp(),
   );
@@ -21,17 +24,9 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-
-  
-  Future<void> initializeDefault() async {
-    FirebaseApp app = await Firebase.initializeApp();
-    debugPrint('Initialized default app $app');
-  }
-
   @override
   void initState() {
     super.initState();
-    initializeDefault();
   }
 
   @override

@@ -11,9 +11,9 @@ class RoundedAvatar extends StatelessWidget {
     return SizedBox(
       height: 126,
       width: ScreenSize.width,
-      child: Column(
+      child: const Column(
         mainAxisAlignment: MainAxisAlignment.end,
-        children: const [
+        children: [
           CircleAvatar(
             backgroundColor: kWhite,
             radius: 50,

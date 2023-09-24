@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:quiz_app/Constants/colors.dart';
@@ -21,18 +20,18 @@ class CustomTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _passwordVisibility =
+    final passwordVisibility =
         Provider.of<PasswordVisibility>(context, listen: true);
     return TextFormField(
         onChanged: onChanged,
         controller: controller,
-        obscureText: _passwordVisibility.changeObsecure(isPassword: isPassword),
+        obscureText: passwordVisibility.changeObsecure(isPassword: isPassword),
         decoration: InputDecoration(
           hintText: hintText,
           prefixIcon: Icon(prefixIcon),
           suffixIcon: suffixIcon(
             isPassword: isPassword,
-            passwordVisibility: _passwordVisibility,
+            passwordVisibility: passwordVisibility,
           ),
           filled: true,
           fillColor: kWhite,

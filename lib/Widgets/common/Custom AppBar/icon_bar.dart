@@ -25,6 +25,3 @@ class IconBar extends StatelessWidget {
     );
   }
 }
-
-
-

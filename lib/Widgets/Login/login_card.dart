@@ -3,7 +3,6 @@ import 'package:provider/provider.dart';
 import 'package:quiz_app/Constants/colors.dart';
 import 'package:quiz_app/Models/screensize.dart';
 import 'package:quiz_app/Providers/login_controller.dart';
-import 'package:quiz_app/Routers/route_names.dart';
 import 'package:quiz_app/Widgets/common/custom_button.dart';
 import 'package:quiz_app/Widgets/common/custom_text.dart';
 import 'package:quiz_app/Widgets/common/custom_textfield.dart';
@@ -81,13 +80,13 @@ Widget loadingWidget() {
       borderRadius: BorderRadius.circular(30),
       color: kWhite,
       elevation: 5,
-      child: SizedBox(
+      child: const SizedBox(
         height: 100,
         width: 100,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: const [
+          children: [
             CircularProgressIndicator(),
           ],
         ),

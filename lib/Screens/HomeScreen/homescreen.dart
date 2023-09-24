@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:quiz_app/Constants/colors.dart';
 import 'package:quiz_app/Database/database.dart';
@@ -23,15 +22,6 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-
-
-
-
-
-
-
-
-
 class TestTileCard extends StatelessWidget {
   final dynamic tileItem;
   const TestTileCard({Key? key, this.tileItem}) : super(key: key);
@@ -48,6 +38,7 @@ class TestTileCard extends StatelessWidget {
           topRight: Radius.circular(30),
         ),
         child: SizedBox(
+          height: 200,
           child: Column(
             children: [
               //red
@@ -56,11 +47,10 @@ class TestTileCard extends StatelessWidget {
               ),
               //green
               TestTileDetails(
-               tileItem: tileItem,
+                tileItem: tileItem,
               )
             ],
           ),
-          height: 200,
         ),
       ),
     );
