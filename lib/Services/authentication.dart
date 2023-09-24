@@ -1,11 +1,13 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:quiz_app/constants/storage_keys.dart';
+import 'package:quiz_app/main.dart';
 
 class AuthService {
-  FirebaseAuth auth = FirebaseAuth.instance;
+  static FirebaseAuth auth = FirebaseAuth.instance;
 
   //Register with Email And Password
-  Future<String?> registerWithEmailAndPassword(
+  static Future<String?> registerWithEmailAndPassword(
       {required String email,
       required String password,
       required String fullName}) async {
@@ -23,22 +25,20 @@ class AuthService {
     }
   }
 
-
-  //Sign in with Email And Password
-  Future<String?> signInWithEmailAndPassword({
+  static Future<String> signInWithEmailAndPassword({
     required String email,
     required String password,
   }) async {
     try {
-      UserCredential userCredential = await auth.signInWithEmailAndPassword(
+      UserCredential credential = await auth.signInWithEmailAndPassword(
           email: email, password: password);
-
-      return userCredential.user!.uid;
+      prefs.setString(StorageKeys.uid, credential.user!.uid);
+      return "";
     } on FirebaseAuthException catch (e) {
       debugPrint(e.toString());
+      return e.message ?? "Something went wrong!";
     } catch (e) {
-      debugPrint(e.toString());
+      return e.toString();
     }
-    return null;
   }
 }

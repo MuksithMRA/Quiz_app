@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
-import '../Routers/route_names.dart';
+import '../services/authentication.dart';
 
 class AuthenticationProvider extends ChangeNotifier {
   String email = "";
@@ -17,38 +17,9 @@ class AuthenticationProvider extends ChangeNotifier {
     });
   }
 
-  setEmail(String val) {
-    email = val;
-    notifyListeners();
-  }
-
-  setPassword(String val) {
-    password = val;
-    notifyListeners();
-  }
-
-  void onLogin(BuildContext context) async {
-    // if (_email == "" && _password == "") {
-    //   debugPrint("Enter valid Credentials");
-    // } else {
-    //   isLoading = true;
-    //   notifyListeners();
-    //   String? result = await AuthService()
-    //       .signInWithEmailAndPassword(email: _email, password: _password);
-    //   if (result == null) {
-    //     debugPrint("Login Failed");
-    //     _email = "";
-    //     _password = "";
-    //     isLoading = false;
-    //     notifyListeners();
-    //   } else {
-    //     Navigator.pushNamed(context, home);
-    //     isLoading = false;
-    //     _email = "";
-    //     _password = "";
-    //     notifyListeners();
-    //   }
-    // }
-    Navigator.pushNamed(context, home);
+  Future<String> onLogin(String email, String password) async {
+    String result = await AuthService.signInWithEmailAndPassword(
+        email: email, password: password);
+    return result;
   }
 }

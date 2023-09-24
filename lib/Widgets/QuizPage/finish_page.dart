@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../constants/images.dart';
-import '../../models/screensize.dart';
 import '../../providers/quiz_provider.dart';
+import '../../utils/screensize.dart';
 import '../common/custom_button.dart';
 import '../common/custom_text.dart';
 

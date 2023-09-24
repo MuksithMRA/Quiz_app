@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:quiz_app/constants/colors.dart';
-import 'package:quiz_app/models/screensize.dart';
-import 'package:quiz_app/providers/quiz_provider.dart';
-import 'package:quiz_app/Widgets/common/custom_text.dart';
+
+import '../../constants/colors.dart';
+import '../../providers/quiz_provider.dart';
+import '../../utils/screensize.dart';
+import '../common/custom_text.dart';
 
 class Answers extends StatelessWidget {
   final List<String> answers;

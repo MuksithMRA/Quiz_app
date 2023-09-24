@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app/constants/colors.dart';
-import 'package:quiz_app/models/screensize.dart';
-import 'package:quiz_app/Widgets/common/custom_text.dart';
+import '../../constants/colors.dart';
+import '../../utils/screensize.dart';
+import '../common/custom_text.dart';
 
 class Question extends StatelessWidget {
   final String quiz;

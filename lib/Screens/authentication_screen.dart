@@ -1,11 +1,11 @@
 import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
-import '../models/screensize.dart';
 import '../Widgets/Login/bg.dart';
 import '../Widgets/Login/login_card.dart';
 import '../Widgets/Login/logobox.dart';
 import '../Widgets/Login/register_card.dart';
 import '../Widgets/common/custom_text.dart';
+import '../utils/screensize.dart';
 
 class AuthenticationScreen extends StatefulWidget {
   const AuthenticationScreen({Key? key}) : super(key: key);

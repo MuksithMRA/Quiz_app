@@ -1,19 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:quiz_app/constants/colors.dart';
-import 'package:quiz_app/models/screensize.dart';
-import 'package:quiz_app/providers/authentication_provider.dart';
-import 'package:quiz_app/Widgets/common/custom_button.dart';
-import 'package:quiz_app/Widgets/common/custom_text.dart';
-import 'package:quiz_app/Widgets/common/custom_textfield.dart';
+import '../../constants/colors.dart';
+import '../../utils/screensize.dart';
+import '../common/custom_button.dart';
+import '../common/custom_text.dart';
+import '../common/custom_textfield.dart';
 
 class RegisterCard extends StatelessWidget {
   const RegisterCard({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final loginAuth =
-        Provider.of<AuthenticationProvider>(context, listen: false);
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 20),
       decoration: BoxDecoration(
@@ -38,43 +34,28 @@ class RegisterCard extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
           const SizedBox(height: 20),
-          CustomTextField(
-            onChanged: (val) {
-              loginAuth.setEmail(val);
-            },
+          const CustomTextField(
             hintText: "First Name",
             prefixIcon: Icons.mail,
           ),
           const SizedBox(height: 15),
-          CustomTextField(
-            onChanged: (val) {
-              loginAuth.setEmail(val);
-            },
+          const CustomTextField(
             hintText: "Last Name",
             prefixIcon: Icons.mail,
           ),
           const SizedBox(height: 15),
-          CustomTextField(
-            onChanged: (val) {
-              loginAuth.setEmail(val);
-            },
+          const CustomTextField(
             hintText: "Email address",
             prefixIcon: Icons.mail,
           ),
           const SizedBox(height: 15),
-          CustomTextField(
-            onChanged: (val) {
-              loginAuth.setPassword(val);
-            },
+          const CustomTextField(
             isPassword: true,
             hintText: "Password",
             prefixIcon: Icons.lock,
           ),
           const SizedBox(height: 15),
-          CustomTextField(
-            onChanged: (val) {
-              loginAuth.setPassword(val);
-            },
+          const CustomTextField(
             isPassword: true,
             hintText: "Confirm Password",
             prefixIcon: Icons.lock,
@@ -84,9 +65,7 @@ class RegisterCard extends StatelessWidget {
             height: ScreenSize.height * 0.06,
             minWidth: ScreenSize.width * 0.45,
             text: "Register",
-            ontap: () {
-              loginAuth.onLogin(context);
-            },
+            ontap: () {},
             radius: 25,
           ),
         ],

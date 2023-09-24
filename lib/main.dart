@@ -6,11 +6,15 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:quiz_app/providers/providers.dart';
 import 'package:quiz_app/routers/route_names.dart';
 import 'package:quiz_app/firebase_options.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'routers/route.dart';
+
+late SharedPreferences prefs;
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  prefs = await SharedPreferences.getInstance();
   runApp(
     const MyApp(),
   );

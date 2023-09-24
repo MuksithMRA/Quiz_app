@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app/constants/colors.dart';
-import 'package:quiz_app/models/screensize.dart';
+import '../../constants/colors.dart';
+import '../../utils/screensize.dart';
 
 class LoginBackground extends StatelessWidget {
   const LoginBackground({Key? key}) : super(key: key);

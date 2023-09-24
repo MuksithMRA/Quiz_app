@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_app/constants/images.dart';
-import 'package:quiz_app/models/screensize.dart';
+
+import '../../utils/screensize.dart';
 
 Align logoBox() {
   return Align(

@@ -9,7 +9,7 @@ class Database {
       testName: "1st Term",
       subject: "Physics",
       author: "Mr Saman",
-      quizQty: "50",
+      quizQty: 50,
       isDone: true,
       mark: 80,
       quizList: [
@@ -34,7 +34,6 @@ class Database {
     ),
   ];
 
-  //ScoreTileData
   static List<ScoreTile> scoreList =
       testTileData.where((element) => element.isDone).toList().map((item) {
     return ScoreTile(
