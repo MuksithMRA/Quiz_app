@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:quiz_app/Constants/colors.dart';
 import 'package:quiz_app/Models/screensize.dart';
-import 'package:quiz_app/Providers/login_controller.dart';
+import 'package:quiz_app/Providers/authentication_provider.dart';
 import 'package:quiz_app/Widgets/common/custom_button.dart';
 import 'package:quiz_app/Widgets/common/custom_text.dart';
 import 'package:quiz_app/Widgets/common/custom_textfield.dart';
@@ -12,7 +12,8 @@ class RegisterCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final loginAuth = Provider.of<LoginController>(context, listen: false);
+    final loginAuth =
+        Provider.of<AuthenticationProvider>(context, listen: false);
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 20),
       decoration: BoxDecoration(

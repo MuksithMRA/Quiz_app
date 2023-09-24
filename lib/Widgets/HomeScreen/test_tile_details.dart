@@ -3,11 +3,12 @@ import 'package:provider/provider.dart';
 import 'package:quiz_app/Constants/colors.dart';
 import 'package:quiz_app/Database/database.dart';
 import 'package:quiz_app/Models/screensize.dart';
-import 'package:quiz_app/Providers/rad_btn.dart';
 
-import 'package:quiz_app/Screens/Quiz%20Page/quiz_page.dart';
+import 'package:quiz_app/Screens/quiz_page.dart';
 import 'package:quiz_app/Widgets/common/custom_button.dart';
 import 'package:quiz_app/Widgets/common/custom_text.dart';
+
+import '../../Providers/quiz_provider.dart';
 
 class TestTileDetails extends StatelessWidget {
   final dynamic tileItem;
@@ -67,7 +68,7 @@ class TestTileRight extends StatelessWidget {
             bgColor: tileItem.isDone ? kWhite : primaryColor,
             text: tileItem.isDone ? "Redo Quiz" : "Start Quiz",
             ontap: () {
-              Provider.of<RadBtn>(context, listen: false)
+              Provider.of<QuizProvider>(context, listen: false)
                   .setTileIndex(Database.testTileData.indexOf(tileItem));
               Navigator.push(context, MaterialPageRoute(builder: (_) {
                 return QuizPage(tileItem: tileItem);

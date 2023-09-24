@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
-class PasswordVisibility extends ChangeNotifier {
+class CommonProvider extends ChangeNotifier {
   bool isShowing = false;
 
   void changeState() {

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:quiz_app/Database/database.dart';
 import 'package:quiz_app/Widgets/common/snackbar.dart';
 
-class RadBtn extends ChangeNotifier {
+class QuizProvider extends ChangeNotifier {
   int? answerIndex;
   int quizIndex = 0;
   int tileIndex = 0;

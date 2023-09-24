@@ -1,15 +1,15 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:quiz_app/Constants/colors.dart';
-import 'package:quiz_app/Models/screensize.dart';
-import 'package:quiz_app/Models/test_tile.dart';
-import 'package:quiz_app/Providers/rad_btn.dart';
-import 'package:quiz_app/Routers/route_names.dart';
-import 'package:quiz_app/Widgets/QuizPage/answers.dart';
-import 'package:quiz_app/Widgets/QuizPage/finish_page.dart';
-import 'package:quiz_app/Widgets/QuizPage/question.dart';
-import 'package:quiz_app/Widgets/common/custom_text.dart';
+import '../Constants/colors.dart';
+import '../Models/screensize.dart';
+import '../Models/test_tile.dart';
+import '../Providers/quiz_provider.dart';
+import '../Routers/route_names.dart';
+import '../Widgets/QuizPage/answers.dart';
+import '../Widgets/QuizPage/finish_page.dart';
+import '../Widgets/QuizPage/question.dart';
+import '../Widgets/common/custom_text.dart';
 
 class QuizPage extends StatelessWidget {
   final TestTile tileItem;
@@ -18,7 +18,7 @@ class QuizPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //provider Object
-    final quizData = Provider.of<RadBtn>(context, listen: true);
+    final quizData = Provider.of<QuizProvider>(context, listen: true);
 
     return WillPopScope(
       onWillPop: () async {

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:quiz_app/Constants/images.dart';
-import 'package:quiz_app/Models/screensize.dart';
-import 'package:quiz_app/Providers/rad_btn.dart';
-import 'package:quiz_app/Widgets/common/custom_button.dart';
-import 'package:quiz_app/Widgets/common/custom_text.dart';
+import '../../Constants/images.dart';
+import '../../Models/screensize.dart';
+import '../../Providers/quiz_provider.dart';
+import '../common/custom_button.dart';
+import '../common/custom_text.dart';
 
 class FinishPage extends StatelessWidget {
   const FinishPage({Key? key}) : super(key: key);
@@ -13,7 +13,7 @@ class FinishPage extends StatelessWidget {
   Widget build(BuildContext context) {
     int mark = 50;
 
-    return Consumer<RadBtn>(
+    return Consumer<QuizProvider>(
       builder: (context, rad, child) {
         return SizedBox(
           height: ScreenSize.height,

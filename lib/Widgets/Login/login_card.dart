@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../Constants/colors.dart';
 import '../../Models/screensize.dart';
-import '../../Providers/login_controller.dart';
+import '../../Providers/authentication_provider.dart';
 import '../common/custom_button.dart';
 import '../common/custom_text.dart';
 import '../common/custom_textfield.dart';
@@ -12,7 +12,8 @@ class LoginCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final loginAuth = Provider.of<LoginController>(context, listen: false);
+    final loginAuth =
+        Provider.of<AuthenticationProvider>(context, listen: false);
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 20),
       decoration: BoxDecoration(

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:quiz_app/Constants/colors.dart';
-import 'package:quiz_app/Providers/password_visibility.dart';
+import 'package:quiz_app/Providers/common_provider.dart';
+
+import '../../Constants/colors.dart';
 
 class CustomTextField extends StatelessWidget {
   final IconData prefixIcon;
@@ -21,7 +22,7 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final passwordVisibility =
-        Provider.of<PasswordVisibility>(context, listen: true);
+        Provider.of<CommonProvider>(context, listen: true);
     return TextFormField(
         onChanged: onChanged,
         controller: controller,

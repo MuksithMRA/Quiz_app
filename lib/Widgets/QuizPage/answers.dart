@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:quiz_app/Constants/colors.dart';
 import 'package:quiz_app/Models/screensize.dart';
-import 'package:quiz_app/Providers/rad_btn.dart';
+import 'package:quiz_app/Providers/quiz_provider.dart';
 import 'package:quiz_app/Widgets/common/custom_text.dart';
 
 class Answers extends StatelessWidget {
@@ -11,7 +11,7 @@ class Answers extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<RadBtn>(
+    return Consumer<QuizProvider>(
       builder: (context, rad, child) {
         return Container(
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 15),

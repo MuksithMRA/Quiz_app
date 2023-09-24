@@ -1,11 +1,11 @@
 import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
-import '../../Models/screensize.dart';
-import '../../Widgets/Login/bg.dart';
-import '../../Widgets/Login/login_card.dart';
-import '../../Widgets/Login/logobox.dart';
-import '../../Widgets/Login/register_card.dart';
-import '../../Widgets/common/custom_text.dart';
+import '../Models/screensize.dart';
+import '../Widgets/Login/bg.dart';
+import '../Widgets/Login/login_card.dart';
+import '../Widgets/Login/logobox.dart';
+import '../Widgets/Login/register_card.dart';
+import '../Widgets/common/custom_text.dart';
 
 class AuthenticationScreen extends StatefulWidget {
   const AuthenticationScreen({Key? key}) : super(key: key);
@@ -50,7 +50,7 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             CustomText(
-                text: cardKey.currentState!.isFront
+                text: cardKey.currentState?.isFront ?? true
                     ? "Don't you have an account? "
                     : "Already have an account? "),
             InkWell(
@@ -59,7 +59,9 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
                 setState(() {});
               },
               child: CustomText(
-                text: cardKey.currentState!.isFront ? "Register here" : "Login",
+                text: cardKey.currentState?.isFront ?? true
+                    ? "Register here"
+                    : "Login",
                 fontWeight: FontWeight.bold,
               ),
             )
