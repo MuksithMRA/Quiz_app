@@ -9,9 +9,7 @@ PreferredSize customAppBar({required String title, required leadingIcon}) {
       preferredSize: Size.fromHeight(ScreenSize.height * 0.2),
       child: Stack(
         children: [
-          //background curve
           const RoundedBg(),
-          //heading
           RoundedHeading(
             title: title,
           ),

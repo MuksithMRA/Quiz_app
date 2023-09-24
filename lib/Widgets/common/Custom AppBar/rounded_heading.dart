@@ -14,7 +14,6 @@ class RoundedHeading extends StatelessWidget {
     return SizedBox(
       height: ScreenSize.height * 0.2,
       width: ScreenSize.width,
-      //color: Colors.green,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
@@ -29,6 +28,7 @@ class RoundedHeading extends StatelessWidget {
               child: CustomText(
                 text: title,
                 color: primaryColor,
+                fontSize: 18,
                 fontWeight: FontWeight.bold,
               ),
             ),
