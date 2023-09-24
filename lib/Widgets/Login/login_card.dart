@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:quiz_app/providers/authentication_provider.dart';
 import 'package:quiz_app/utils/loader_overlay.dart';
 import '../../constants/colors.dart';
+import '../../routers/route_names.dart';
 import '../../utils/screensize.dart';
 import '../../utils/utility.dart';
 import '../common/custom_button.dart';
@@ -92,6 +93,8 @@ class _LoginCardState extends State<LoginCard> {
                   );
                   if (mounted) {
                     if (message.isEmpty) {
+                      Navigator.pushNamedAndRemoveUntil(
+                          context, home, (route) => false);
                     } else {
                       Utility.error(context, message);
                     }

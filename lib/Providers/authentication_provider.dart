@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:quiz_app/models/user_model.dart';
 import '../services/auth_service.dart';
 
 class AuthenticationProvider extends ChangeNotifier {
@@ -20,6 +21,11 @@ class AuthenticationProvider extends ChangeNotifier {
   Future<String> onLogin(String email, String password) async {
     String result = await AuthService.signInWithEmailAndPassword(
         email: email, password: password);
+    return result;
+  }
+
+  Future<String> onRegister(UserModel userModel) async {
+    String result = await AuthService.registerWithEmailAndPassword(userModel);
     return result;
   }
 }
