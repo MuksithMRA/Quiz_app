@@ -38,14 +38,12 @@ class TestTileCard extends StatelessWidget {
           topRight: Radius.circular(30),
         ),
         child: SizedBox(
-          height: 200,
+          height: 250,
           child: Column(
             children: [
-              //red
               TileImage(
                 img: tileItem.image,
               ),
-              //green
               TestTileDetails(
                 tileItem: tileItem,
               )
