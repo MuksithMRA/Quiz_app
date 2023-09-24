@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'Models/screensize.dart';
-import 'Providers/authentication_provider.dart';
-import 'Screens/authentication_screen.dart';
-import 'Screens/home.dart';
+import 'models/screensize.dart';
+import 'providers/authentication_provider.dart';
+import 'screens/authentication_screen.dart';
+import 'screens/home.dart';
 
 class Wrapper extends StatelessWidget {
   const Wrapper({Key? key}) : super(key: key);

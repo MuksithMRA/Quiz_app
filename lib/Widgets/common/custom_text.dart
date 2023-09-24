@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app/Constants/colors.dart';
+import 'package:quiz_app/constants/colors.dart';
 
 class CustomText extends StatelessWidget {
   final String text;

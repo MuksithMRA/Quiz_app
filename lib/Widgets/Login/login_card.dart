@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../Constants/colors.dart';
-import '../../Models/screensize.dart';
-import '../../Providers/authentication_provider.dart';
+import '../../constants/colors.dart';
+import '../../models/screensize.dart';
+import '../../providers/authentication_provider.dart';
 import '../common/custom_button.dart';
 import '../common/custom_text.dart';
 import '../common/custom_textfield.dart';

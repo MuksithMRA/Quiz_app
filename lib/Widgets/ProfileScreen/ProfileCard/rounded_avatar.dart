@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app/Constants/colors.dart';
-import 'package:quiz_app/Constants/images.dart';
-import 'package:quiz_app/Models/screensize.dart';
+import 'package:quiz_app/constants/colors.dart';
+import 'package:quiz_app/constants/images.dart';
+import 'package:quiz_app/models/screensize.dart';
 
 class RoundedAvatar extends StatelessWidget {
   const RoundedAvatar({Key? key}) : super(key: key);

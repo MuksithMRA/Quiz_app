@@ -1,5 +1,5 @@
-import 'package:quiz_app/Constants/images.dart';
-import 'package:quiz_app/Models/quiz.dart';
+import 'package:quiz_app/constants/images.dart';
+import 'package:quiz_app/models/quiz.dart';
 
 class TestTile {
   String image;

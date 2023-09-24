@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:quiz_app/Database/database.dart';
+import 'package:quiz_app/database/database.dart';
 import 'package:quiz_app/Widgets/common/snackbar.dart';
 
 class QuizProvider extends ChangeNotifier {
@@ -15,7 +15,7 @@ class QuizProvider extends ChangeNotifier {
     answerIndex = val;
     notifyListeners();
 
-    if (item.answer[val] == item.correctAnswer) {
+    if (item.answers[val].answer == item.correctAnswer!.answer) {
       ScaffoldMessenger.of(context).showSnackBar(customSnackBar(
         color: Colors.green,
         text: "Correct Answer",

@@ -1,10 +1,10 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../Constants/colors.dart';
-import '../Models/screensize.dart';
-import '../Models/test_tile.dart';
-import '../Providers/quiz_provider.dart';
+import '../constants/colors.dart';
+import '../models/screensize.dart';
+import '../models/test_tile.dart';
+import '../providers/quiz_provider.dart';
 import '../Routers/route_names.dart';
 import '../Widgets/QuizPage/answers.dart';
 import '../Widgets/QuizPage/finish_page.dart';
@@ -53,7 +53,9 @@ class QuizPage extends StatelessWidget {
                       height: 20,
                     ),
                     Answers(
-                      answers: tileItem.quizList[quizData.quizIndex].answer,
+                      answers: tileItem.quizList[quizData.quizIndex].answers
+                          .map((e) => e.answer)
+                          .toList(),
                     ),
                   ],
                 ),

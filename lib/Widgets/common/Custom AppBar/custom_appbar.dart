@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app/Models/screensize.dart';
+import 'package:quiz_app/models/screensize.dart';
 import 'icon_bar.dart';
 import 'rounded_bg.dart';
 import 'rounded_heading.dart';

@@ -1,10 +1,12 @@
+import 'package:quiz_app/models/answer_model.dart';
+
 class Quiz {
   String quiz;
-  List<String> answer;
-  String correctAnswer;
+  List<AnswerModel> answers;
+  AnswerModel? correctAnswer;
   Quiz({
-    required this.quiz,
-    required this.answer,
-    required this.correctAnswer,
+    this.quiz = "",
+    this.answers = const [],
+    this.correctAnswer,
   });
 }

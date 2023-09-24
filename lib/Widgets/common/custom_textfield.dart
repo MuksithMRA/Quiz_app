@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:quiz_app/Providers/common_provider.dart';
+import 'package:quiz_app/providers/common_provider.dart';
 
-import '../../Constants/colors.dart';
+import '../../constants/colors.dart';
 
 class CustomTextField extends StatelessWidget {
   final IconData prefixIcon;

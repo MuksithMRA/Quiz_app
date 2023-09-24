@@ -1,6 +1,6 @@
 import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
-import '../Models/screensize.dart';
+import '../models/screensize.dart';
 import '../Widgets/Login/bg.dart';
 import '../Widgets/Login/login_card.dart';
 import '../Widgets/Login/logobox.dart';
@@ -16,6 +16,7 @@ class AuthenticationScreen extends StatefulWidget {
 
 class _AuthenticationScreenState extends State<AuthenticationScreen> {
   GlobalKey<FlipCardState> cardKey = GlobalKey<FlipCardState>();
+  bool isRegister = false;
 
   @override
   Widget build(BuildContext context) {
@@ -50,18 +51,17 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             CustomText(
-                text: cardKey.currentState?.isFront ?? true
+                text: !isRegister
                     ? "Don't you have an account? "
                     : "Already have an account? "),
             InkWell(
               onTap: () {
                 cardKey.currentState!.toggleCard();
+                isRegister = !isRegister;
                 setState(() {});
               },
               child: CustomText(
-                text: cardKey.currentState?.isFront ?? true
-                    ? "Register here"
-                    : "Login",
+                text: !isRegister ? "Register here" : "Login",
                 fontWeight: FontWeight.bold,
               ),
             )

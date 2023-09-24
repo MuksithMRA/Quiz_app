@@ -1,4 +1,4 @@
-import 'package:quiz_app/Constants/images.dart';
+import 'package:quiz_app/constants/images.dart';
 
 class ScoreTile {
   String leadingImg;

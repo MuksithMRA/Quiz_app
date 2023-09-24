@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app/Constants/colors.dart';
-import 'package:quiz_app/Database/database.dart';
+import 'package:quiz_app/constants/colors.dart';
+import 'package:quiz_app/database/database.dart';
 
 import 'package:quiz_app/Widgets/HomeScreen/test_tile_details.dart';
 import 'package:quiz_app/Widgets/HomeScreen/tile_image.dart';

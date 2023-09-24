@@ -1,12 +1,12 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:quiz_app/Constants/colors.dart';
+import 'package:quiz_app/constants/colors.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:quiz_app/Providers/providers.dart';
-import 'package:quiz_app/Routers/route_names.dart';
+import 'package:quiz_app/providers/providers.dart';
+import 'package:quiz_app/routers/route_names.dart';
 import 'package:quiz_app/firebase_options.dart';
-import 'Routers/route.dart';
+import 'routers/route.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

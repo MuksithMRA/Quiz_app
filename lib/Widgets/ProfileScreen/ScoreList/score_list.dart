@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app/Database/database.dart';
+import 'package:quiz_app/database/database.dart';
 
 import 'package:quiz_app/Widgets/ProfileScreen/ScoreList/score_list_tile.dart';
 

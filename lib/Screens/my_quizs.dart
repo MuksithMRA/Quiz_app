@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app/Database/database.dart';
-import 'package:quiz_app/Models/test_tile.dart';
+import 'package:quiz_app/database/database.dart';
+import 'package:quiz_app/models/test_tile.dart';
 
-import 'package:quiz_app/Screens/homescreen.dart';
+import 'package:quiz_app/screens/homescreen.dart';
 import 'package:quiz_app/Widgets/common/custom_text.dart';
 
 class MyQuizs extends StatelessWidget {

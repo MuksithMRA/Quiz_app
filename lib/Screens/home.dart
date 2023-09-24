@@ -1,7 +1,7 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import '../Constants/colors.dart';
-import '../Models/appbar_model.dart';
+import '../constants/colors.dart';
+import '../models/appbar_model.dart';
 import '../Widgets/common/Custom AppBar/custom_appbar.dart';
 import 'homescreen.dart';
 import 'my_quizs.dart';

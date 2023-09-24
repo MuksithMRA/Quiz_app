@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:quiz_app/Constants/colors.dart';
-import 'package:quiz_app/Database/database.dart';
-import 'package:quiz_app/Models/screensize.dart';
+import 'package:quiz_app/constants/colors.dart';
+import 'package:quiz_app/database/database.dart';
+import 'package:quiz_app/models/screensize.dart';
 
-import 'package:quiz_app/Screens/quiz_page.dart';
+import 'package:quiz_app/screens/quiz_page.dart';
 import 'package:quiz_app/Widgets/common/custom_button.dart';
 import 'package:quiz_app/Widgets/common/custom_text.dart';
 
-import '../../Providers/quiz_provider.dart';
+import '../../providers/quiz_provider.dart';
 
 class TestTileDetails extends StatelessWidget {
   final dynamic tileItem;

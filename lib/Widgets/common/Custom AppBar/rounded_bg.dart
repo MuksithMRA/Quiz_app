@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app/Constants/colors.dart';
-import 'package:quiz_app/Models/screensize.dart';
+import 'package:quiz_app/constants/colors.dart';
+import 'package:quiz_app/models/screensize.dart';
 
 class RoundedBg extends StatelessWidget {
   const RoundedBg({Key? key}) : super(key: key);
