@@ -46,6 +46,7 @@ dependencies:
   cloud_firestore: ^4.9.2
   flip_card: ^0.7.0
   shared_preferences: ^2.2.1
+  another_flushbar: ^1.12.30
   
 
 dev_dependencies:

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app/database/database.dart';
-import 'package:quiz_app/models/test_tile.dart';
 
-import 'package:quiz_app/screens/homescreen.dart';
-import 'package:quiz_app/Widgets/common/custom_text.dart';
+import '../Widgets/common/custom_text.dart';
+import '../database/database.dart';
+import '../models/test_tile.dart';
+import 'home_screen.dart';
 
 class MyQuizs extends StatelessWidget {
   const MyQuizs({Key? key}) : super(key: key);

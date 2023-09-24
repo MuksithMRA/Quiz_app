@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
-import '../services/authentication.dart';
+import '../services/auth_service.dart';
 
 class AuthenticationProvider extends ChangeNotifier {
   String email = "";

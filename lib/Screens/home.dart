@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../constants/colors.dart';
 import '../models/appbar_model.dart';
 import '../Widgets/common/Custom AppBar/custom_appbar.dart';
-import 'homescreen.dart';
+import 'home_screen.dart';
 import 'my_quizs.dart';
 import 'profile.dart';
 

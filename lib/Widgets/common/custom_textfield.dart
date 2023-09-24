@@ -10,6 +10,7 @@ class CustomTextField extends StatelessWidget {
   final bool? isPassword;
   final TextEditingController? controller;
   final void Function(String)? onChanged;
+  final String? Function(String?)? validator;
   const CustomTextField({
     Key? key,
     required this.prefixIcon,
@@ -17,6 +18,7 @@ class CustomTextField extends StatelessWidget {
     this.isPassword,
     this.controller,
     this.onChanged,
+    this.validator,
   }) : super(key: key);
 
   @override
@@ -24,6 +26,8 @@ class CustomTextField extends StatelessWidget {
     final passwordVisibility =
         Provider.of<CommonProvider>(context, listen: true);
     return TextFormField(
+        autovalidateMode: AutovalidateMode.onUserInteraction,
+        validator: validator,
         onChanged: onChanged,
         controller: controller,
         obscureText: passwordVisibility.changeObsecure(isPassword: isPassword),
