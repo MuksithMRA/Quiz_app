@@ -10,7 +10,7 @@ class LoginBackground extends StatelessWidget {
     return Align(
       alignment: Alignment.topCenter,
       child: Container(
-        height: ScreenSize.height! * 0.5,
+        height: ScreenSize.height * 0.5,
         color: primaryColor,
       ),
     );

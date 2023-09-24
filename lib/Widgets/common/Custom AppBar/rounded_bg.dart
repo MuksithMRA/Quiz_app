@@ -11,7 +11,7 @@ class RoundedBg extends StatelessWidget {
       borderRadius: const BorderRadius.only(
           bottomLeft: Radius.circular(70), bottomRight: Radius.circular(70)),
       child: Container(
-        height: ScreenSize.height! * 0.17,
+        height: ScreenSize.height * 0.17,
         color: primaryColor,
       ),
     );

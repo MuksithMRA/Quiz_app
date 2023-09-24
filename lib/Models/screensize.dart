@@ -1,9 +1,11 @@
-class ScreenSize {
-  static double? height;
-  static double? width;
+import 'package:flutter/cupertino.dart';
 
-  static void getScreenSize({double? h, double? w}) {
-    height = h;
-    width = w;
+class ScreenSize {
+  static double height = 0;
+  static double width = 0;
+
+  static void getScreenSize(BuildContext context) {
+    height = MediaQuery.sizeOf(context).height;
+    width = MediaQuery.sizeOf(context).width;
   }
 }

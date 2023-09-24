@@ -3,7 +3,6 @@ import 'package:quiz_app/Constants/colors.dart';
 import 'package:quiz_app/Models/screensize.dart';
 import 'package:quiz_app/Widgets/common/custom_text.dart';
 
-
 class BgDetails extends StatelessWidget {
   const BgDetails({Key? key}) : super(key: key);
 
@@ -15,7 +14,7 @@ class BgDetails extends StatelessWidget {
         borderRadius: BorderRadius.circular(25),
         child: Container(
           color: kWhite,
-          width: ScreenSize.width! * 0.8,
+          width: ScreenSize.width * 0.8,
           height: 150,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
@@ -56,7 +55,7 @@ Widget profileEmail() {
 
 Widget averageBox() {
   return SizedBox(
-    width: ScreenSize.width! * 0.4,
+    width: ScreenSize.width * 0.4,
     height: 35,
     child: const Center(
       child: CustomText(
@@ -70,7 +69,7 @@ Widget averageBox() {
 
 Widget rankBox() {
   return SizedBox(
-    width: ScreenSize.width! * 0.4,
+    width: ScreenSize.width * 0.4,
     height: 35,
     child: const Center(
       child: CustomText(

@@ -14,8 +14,8 @@ class ScoreListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(
-          horizontal: ScreenSize.width! * 0.1, vertical: 7),
+      padding:
+          EdgeInsets.symmetric(horizontal: ScreenSize.width * 0.1, vertical: 7),
       child: ListTile(
           title: CustomText(
             text: testName,

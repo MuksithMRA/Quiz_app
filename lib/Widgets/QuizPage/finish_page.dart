@@ -44,7 +44,7 @@ class FinishPage extends StatelessWidget {
               ),
               CustomButton(
                 text: "Redo",
-                minWidth: ScreenSize.width! * 0.5,
+                minWidth: ScreenSize.width * 0.5,
                 height: 50,
                 radius: 15,
                 ontap: () {

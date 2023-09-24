@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../Constants/colors.dart';
-import '../../Models/screensize.dart';
-import '../../Providers/login_controller.dart';
-import '../common/custom_button.dart';
-import '../common/custom_text.dart';
-import '../common/custom_textfield.dart';
+import 'package:quiz_app/Constants/colors.dart';
+import 'package:quiz_app/Models/screensize.dart';
+import 'package:quiz_app/Providers/login_controller.dart';
+import 'package:quiz_app/Widgets/common/custom_button.dart';
+import 'package:quiz_app/Widgets/common/custom_text.dart';
+import 'package:quiz_app/Widgets/common/custom_textfield.dart';
 
-class LoginCard extends StatelessWidget {
-  const LoginCard({Key? key}) : super(key: key);
+class RegisterCard extends StatelessWidget {
+  const RegisterCard({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,17 +26,33 @@ class LoginCard extends StatelessWidget {
           )
         ],
       ),
-      height: ScreenSize.height * 0.48,
+      height: ScreenSize.height * 0.6,
       width: double.infinity,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const CustomText(
-            text: "Login",
+            text: "Register",
             fontSize: 24,
             fontWeight: FontWeight.bold,
           ),
           const SizedBox(height: 20),
+          CustomTextField(
+            onChanged: (val) {
+              loginAuth.setEmail(val);
+            },
+            hintText: "First Name",
+            prefixIcon: Icons.mail,
+          ),
+          const SizedBox(height: 15),
+          CustomTextField(
+            onChanged: (val) {
+              loginAuth.setEmail(val);
+            },
+            hintText: "Last Name",
+            prefixIcon: Icons.mail,
+          ),
+          const SizedBox(height: 15),
           CustomTextField(
             onChanged: (val) {
               loginAuth.setEmail(val);
@@ -53,11 +69,20 @@ class LoginCard extends StatelessWidget {
             hintText: "Password",
             prefixIcon: Icons.lock,
           ),
+          const SizedBox(height: 15),
+          CustomTextField(
+            onChanged: (val) {
+              loginAuth.setPassword(val);
+            },
+            isPassword: true,
+            hintText: "Confirm Password",
+            prefixIcon: Icons.lock,
+          ),
           const SizedBox(height: 20),
           CustomButton(
             height: ScreenSize.height * 0.06,
             minWidth: ScreenSize.width * 0.45,
-            text: "Login",
+            text: "Register",
             ontap: () {
               loginAuth.onLogin(context);
             },

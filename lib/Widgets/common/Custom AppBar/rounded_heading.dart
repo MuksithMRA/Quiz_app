@@ -12,7 +12,7 @@ class RoundedHeading extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: ScreenSize.height! * 0.2,
+      height: ScreenSize.height * 0.2,
       width: ScreenSize.width,
       //color: Colors.green,
       child: Column(
@@ -23,8 +23,8 @@ class RoundedHeading extends StatelessWidget {
                 color: kWhite,
                 borderRadius: BorderRadius.circular(25),
                 border: Border.all(color: primaryColor)),
-            width: ScreenSize.width! * 0.45,
-            height: ScreenSize.height! * 0.08,
+            width: ScreenSize.width * 0.45,
+            height: ScreenSize.height * 0.08,
             child: Center(
               child: CustomText(
                 text: title,

@@ -39,7 +39,7 @@ class QuizPage extends StatelessWidget {
             ? const FinishPage()
             : Padding(
                 padding:
-                    EdgeInsets.symmetric(horizontal: ScreenSize.width! * 0.05),
+                    EdgeInsets.symmetric(horizontal: ScreenSize.width * 0.05),
                 child: Column(
                   children: [
                     const SizedBox(
@@ -47,7 +47,7 @@ class QuizPage extends StatelessWidget {
                     ),
                     Question(
                       quiz: tileItem.quizList[quizData.quizIndex].quiz,
-                      quizNo: (quizData.quizIndex+1).toString(),
+                      quizNo: (quizData.quizIndex + 1).toString(),
                     ),
                     const SizedBox(
                       height: 20,

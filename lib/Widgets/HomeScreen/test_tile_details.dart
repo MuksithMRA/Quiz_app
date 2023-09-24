@@ -22,7 +22,7 @@ class TestTileDetails extends StatelessWidget {
       child: Container(
         color: primaryColor.withOpacity(0.8),
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: ScreenSize.width! * 0.03),
+          padding: EdgeInsets.symmetric(horizontal: ScreenSize.width * 0.03),
           child: Row(
             children: [
               TestTileLeft(
@@ -46,7 +46,7 @@ class TestTileRight extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: ScreenSize.width! * 0.4,
+      width: ScreenSize.width * 0.4,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
@@ -87,7 +87,7 @@ class TestTileLeft extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: ScreenSize.width! * 0.4,
+      width: ScreenSize.width * 0.4,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
