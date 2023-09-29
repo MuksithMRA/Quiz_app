@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
 import '../../constants/colors.dart';
-import '../../providers/quiz_provider.dart';
+import '../../providers/test_provider.dart';
 import '../../utils/screensize.dart';
 import '../common/custom_text.dart';
 
@@ -12,7 +11,7 @@ class Answers extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<QuizProvider>(
+    return Consumer<TestProvider>(
       builder: (context, rad, child) {
         return Container(
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 15),

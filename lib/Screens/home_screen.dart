@@ -1,24 +1,48 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:quiz_app/constants/colors.dart';
-import 'package:quiz_app/database/database.dart';
-
 import 'package:quiz_app/Widgets/HomeScreen/test_tile_details.dart';
-import 'package:quiz_app/Widgets/HomeScreen/tile_image.dart';
+import 'package:quiz_app/models/test_model.dart';
+import 'package:quiz_app/providers/test_provider.dart';
 
-class HomeScreen extends StatelessWidget {
+import '../utils/loader_overlay.dart';
+
+class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
   @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(Duration.zero, () {
+      initialize();
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: Database.testTileData.length,
-      itemBuilder: (BuildContext context, int index) {
-        var tileItem = Database.testTileData[index];
-        return TestTileCard(
-          tileItem: tileItem,
+    return Consumer<TestProvider>(
+      builder: (context, cTest, child) {
+        return ListView.builder(
+          itemCount: cTest.testList.length,
+          itemBuilder: (BuildContext context, int index) {
+            TestModel tileItem = cTest.testList[index];
+            return TestTileCard(
+              tileItem: tileItem,
+            );
+          },
         );
       },
     );
+  }
+
+  void initialize() async {
+    await LoadingOverlay.of(context)
+        .during(context.read<TestProvider>().getAllTests());
   }
 }
 
@@ -41,14 +65,29 @@ class TestTileCard extends StatelessWidget {
           height: 250,
           child: Column(
             children: [
-              TileImage(
-                img: tileItem.image,
-              ),
+              tileImage(tileItem.image),
               TestTileDetails(
                 tileItem: tileItem,
               )
             ],
           ),
+        ),
+      ),
+    );
+  }
+
+  Widget tileImage(String img) {
+    return Expanded(
+      child: Material(
+        color: Colors.red,
+        borderRadius: const BorderRadius.only(
+          topLeft: Radius.circular(30),
+          topRight: Radius.circular(30),
+        ),
+        child: FadeInImage(
+          placeholder: const AssetImage('assets/images/test-default.jpg'),
+          image: NetworkImage(img),
+          fit: BoxFit.cover,
         ),
       ),
     );

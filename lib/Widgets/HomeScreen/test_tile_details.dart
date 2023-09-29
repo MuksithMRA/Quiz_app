@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:quiz_app/providers/test_provider.dart';
 
 import '../../constants/colors.dart';
 import '../../database/database.dart';
-import '../../providers/quiz_provider.dart';
 import '../../screens/quiz_page.dart';
 import '../../utils/screensize.dart';
 import '../common/custom_button.dart';
@@ -73,7 +73,7 @@ class TestTileRight extends StatelessWidget {
                   bgColor: tileItem.isDone ? kWhite : primaryColor,
                   text: tileItem.isDone ? "Redo Quiz" : "Start Quiz",
                   ontap: () {
-                    Provider.of<QuizProvider>(context, listen: false)
+                    Provider.of<TestProvider>(context, listen: false)
                         .setTileIndex(Database.testTileData.indexOf(tileItem));
                     Navigator.push(context, MaterialPageRoute(builder: (_) {
                       return QuizPage(tileItem: tileItem);
@@ -108,7 +108,7 @@ class TestTileLeft extends StatelessWidget {
               color: kWhite),
           CustomText(text: tileItem.subject, color: kWhite),
           const SizedBox(height: 10),
-          CustomText(text: tileItem.author, color: kWhite)
+          // CustomText(text: tileItem.author, color: kWhite)
         ],
       ),
     );

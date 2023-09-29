@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:quiz_app/models/user_model.dart';
 import '../constants/images.dart';
 import 'quiz.dart';
 
@@ -6,21 +7,25 @@ class TestModel {
   String image;
   String testName;
   String subject;
-  String author;
+  UserModel? author;
   int quizQty;
+  String description;
+  List<Quiz> quizList;
+  int allocatedTime;
   bool isDone;
   int mark;
-  List<Quiz> quizList;
 
   TestModel({
     this.image = testimg,
     this.testName = "",
     this.subject = "",
-    this.author = "",
+    this.author,
     this.quizQty = 0,
+    this.quizList = const [],
+    this.description = "",
+    this.allocatedTime = 0,
     this.isDone = false,
     this.mark = 0,
-    this.quizList = const [],
   });
 
   Map<String, dynamic> toMap() {
@@ -28,9 +33,11 @@ class TestModel {
       'image': image,
       'name': testName,
       'subject': subject,
-      'author': author,
+      'author': author!.toMap(),
       'qty': quizQty,
       'quiz_list': quizList.map((x) => x.toMap()).toList(),
+      "description": description,
+      "allocated_time": allocatedTime,
     };
   }
 
@@ -39,13 +46,15 @@ class TestModel {
       image: map['image'] ?? "",
       testName: map['name'] ?? "",
       subject: map['subject'] ?? "",
-      author: map['author'] ?? "",
+      author: map['author'] != null ? UserModel.fromMap(map['author']) : null,
       quizQty: map['qty'] ?? 0,
       quizList: List<Quiz>.from(
         (map['quiz_list'] ?? []).map<Quiz>(
           (x) => Quiz.fromMap(x as Map<String, dynamic>),
         ),
       ),
+      description: map['description'] ?? "",
+      allocatedTime: map['allocated_time'] ?? 0,
     );
   }
 

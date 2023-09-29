@@ -2,8 +2,8 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:quiz_app/models/test_model.dart';
+import 'package:quiz_app/providers/test_provider.dart';
 import '../constants/colors.dart';
-import '../providers/quiz_provider.dart';
 import '../Routers/route_names.dart';
 import '../Widgets/QuizPage/answers.dart';
 import '../Widgets/QuizPage/finish_page.dart';
@@ -18,7 +18,7 @@ class QuizPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //provider Object
-    final quizData = Provider.of<QuizProvider>(context, listen: true);
+    final quizData = context.watch<TestProvider>();
 
     return WillPopScope(
       onWillPop: () async {

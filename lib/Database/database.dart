@@ -1,3 +1,5 @@
+import 'package:quiz_app/models/user_model.dart';
+
 import '../models/answer_model.dart';
 import '../models/quiz.dart';
 import '../models/score_tile.dart';
@@ -8,9 +10,9 @@ class Database {
     TestModel(
       testName: "1st Term",
       subject: "Physics",
-      author: "Mr Saman",
+      author: UserModel(),
       quizQty: 50,
-      isDone: true,
+      isDone: false,
       mark: 80,
       quizList: [
         Quiz(

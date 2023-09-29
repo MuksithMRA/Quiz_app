@@ -1,9 +1,18 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:quiz_app/database/database.dart';
-import 'package:quiz_app/Widgets/common/snackbar.dart';
+import 'package:quiz_app/services/test_service.dart';
+import '../database/database.dart';
+import '../models/test_model.dart';
+import '../widgets/common/snackbar.dart';
 
-class QuizProvider extends ChangeNotifier {
+class TestProvider extends ChangeNotifier {
+  List<TestModel> testList = [];
+
+  Future<void> getAllTests() async {
+    testList = await TestService.getAllTests() ?? [];
+    notifyListeners();
+  }
+
   int? answerIndex;
   int quizIndex = 0;
   int tileIndex = 0;
@@ -57,7 +66,7 @@ class QuizProvider extends ChangeNotifier {
   }
 
   bool isFinish() {
-    var item = Database.testTileData[tileIndex];
+    var item = testList[tileIndex];
     if (quizIndex >= item.quizList.length) {
       item.isDone = true;
       return true;

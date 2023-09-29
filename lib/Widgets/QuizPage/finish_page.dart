@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../constants/images.dart';
-import '../../providers/quiz_provider.dart';
+import '../../providers/test_provider.dart';
 import '../../utils/screensize.dart';
 import '../common/custom_button.dart';
 import '../common/custom_text.dart';
@@ -13,7 +13,7 @@ class FinishPage extends StatelessWidget {
   Widget build(BuildContext context) {
     int mark = 50;
 
-    return Consumer<QuizProvider>(
+    return Consumer<TestProvider>(
       builder: (context, rad, child) {
         return SizedBox(
           height: ScreenSize.height,
