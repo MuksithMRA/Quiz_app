@@ -1,11 +1,11 @@
 import '../models/answer_model.dart';
 import '../models/quiz.dart';
 import '../models/score_tile.dart';
-import '../models/test_tile.dart';
+import '../models/test_model.dart';
 
 class Database {
-  static List<TestTile> testTileData = [
-    TestTile(
+  static List<TestModel> testTileData = [
+    TestModel(
       testName: "1st Term",
       subject: "Physics",
       author: "Mr Saman",

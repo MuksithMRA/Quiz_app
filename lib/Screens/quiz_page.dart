@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:quiz_app/models/test_model.dart';
 import '../constants/colors.dart';
-import '../models/test_tile.dart';
 import '../providers/quiz_provider.dart';
 import '../Routers/route_names.dart';
 import '../Widgets/QuizPage/answers.dart';
@@ -12,7 +12,7 @@ import '../Widgets/common/custom_text.dart';
 import '../utils/screensize.dart';
 
 class QuizPage extends StatelessWidget {
-  final TestTile tileItem;
+  final TestModel tileItem;
   const QuizPage({Key? key, required this.tileItem}) : super(key: key);
 
   @override

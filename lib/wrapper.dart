@@ -11,8 +11,7 @@ class Wrapper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     ScreenSize.getScreenSize(context);
-    final authState =
-        Provider.of<AuthenticationProvider>(context, listen: true);
+    final authState = context.watch<AuthenticationProvider>();
     authState.onStateChange();
     return authState.isLoggedIn ? const Home() : const AuthenticationScreen();
   }

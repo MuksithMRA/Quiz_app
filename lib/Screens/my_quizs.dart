@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/models/test_model.dart';
 
 import '../Widgets/common/custom_text.dart';
 import '../database/database.dart';
-import '../models/test_tile.dart';
 import 'home_screen.dart';
 
 class MyQuizs extends StatelessWidget {
@@ -10,7 +10,7 @@ class MyQuizs extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<TestTile> doneTileItems = Database.testTileData
+    List<TestModel> doneTileItems = Database.testTileData
         .where((element) => element.isDone == true)
         .toList();
 
